@@ -1,0 +1,8 @@
+nav {
+  background-color: var(--mainBg2);
+  height: 5rem;
+}
+
+nav > .navContainer > .userMenu > .navUserIcon {
+  font-size: 1.7rem;
+}
