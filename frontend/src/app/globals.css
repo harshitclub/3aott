@@ -555,6 +555,9 @@ body {
 .marginNone {
   margin: 0 !important;
 }
+.marginBottom05 {
+  margin-bottom: 0.5rem;
+}
 .marginBottom1 {
   margin-bottom: 1rem;
 }

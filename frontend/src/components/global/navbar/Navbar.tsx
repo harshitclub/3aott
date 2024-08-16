@@ -8,6 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 const Navbar = () => {
   return (
     <>
@@ -19,16 +20,16 @@ const Navbar = () => {
           </div>
           <ul className="menu flex alignCenter justifyCenter gap2">
             <li>
-              <a>Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a>Pricing</a>
+              <Link href="/pricing">Pricing</Link>
             </li>
             <li>
-              <a>Login</a>
+              <Link href="/login">Login</Link>
             </li>
             <li>
-              <a>Signup</a>
+              <Link href="/signup">Signup</Link>
             </li>
           </ul>
           <div className="userMenu">

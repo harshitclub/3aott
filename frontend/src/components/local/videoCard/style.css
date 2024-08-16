@@ -1,0 +1,9 @@
+.videoCard {
+  width: 20%;
+}
+
+.videoCard > img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.2rem;
+}

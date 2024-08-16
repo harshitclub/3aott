@@ -1,0 +1,67 @@
+.signup {
+  height: 100vh;
+  background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+    url(../../../assets/loginBanner.jpg);
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup > .signupContainer > .signupForm {
+  background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.7)),
+    var(--mainBg2);
+  padding: 1rem 2rem 2rem 2rem;
+  border-radius: 0.2rem;
+  width: 35%;
+}
+
+.signup > .signupContainer > .signupForm > h1 {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--mainBg2);
+  padding: 0 0 1rem 0;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.signup > .signupContainer > .signupForm > form {
+  width: 100%;
+}
+
+.signup > .signupContainer > .signupForm > form > p {
+  text-align: center;
+  border-bottom: 1px solid var(--mainBg2);
+  margin: 0 0 0.5rem 0;
+  padding: 0 0 0.5rem 0;
+}
+.signup > .signupContainer > .signupForm > form > .sFTab > label {
+  margin: 0 0 0.3rem 0;
+  display: block;
+}
+
+.signup > .signupContainer > .signupForm > form > .sFTab > label > span {
+  color: #dc2626;
+}
+
+.signup > .signupContainer > .signupForm > form > .sFTab > input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  color: #000;
+  border-radius: 0.2rem;
+}
+
+.signup > .signupContainer > .signupForm > form > .sFTab > input[select] {
+  outline: var(--mainBg);
+}
+
+.signup > .signupContainer > .signupForm > form > .sFTab > p {
+  text-align: right;
+}
+
+.signup > .signupContainer > .signupForm > form > button {
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  background-color: var(--mainBg);
+}

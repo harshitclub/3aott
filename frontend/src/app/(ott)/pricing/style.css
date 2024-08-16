@@ -1,0 +1,46 @@
+.pricing {
+  background: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)),
+    url(../../../assets/pricing.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 0;
+}
+
+.pricing > .pricingContainer > .pricingTabs > .pricingTab {
+  background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.7)),
+    var(--mainBg2);
+  border-radius: 0.2rem;
+  padding: 1rem;
+  width: 20%;
+}
+
+.pricing > .pricingContainer > .pricingTabs > .pricingTab > h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid var(--mainBg2);
+  padding: 0 0 1rem 0;
+}
+
+.pricing > .pricingContainer > .pricingTabs > .pricingTab > h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  padding: 0 0 1rem 0;
+  border-bottom: 1px solid var(--mainBg2);
+}
+
+.pricing > .pricingContainer > .pricingTabs > .pricingTab > p {
+  text-align: center;
+  border-bottom: 1px solid var(--mainBg2);
+  margin: 0 0 1rem 0;
+  padding: 0 0 1rem 0;
+}
+
+.pricing > .pricingContainer > .pricingTabs > .pricingTab > button {
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  background-color: var(--mainBg);
+}
