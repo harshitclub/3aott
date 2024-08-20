@@ -5,7 +5,7 @@ const Pricing = () => {
     <>
       <section className="pricing width100 flex alignCenter justifyCenter">
         <div className="pricingContainer width95 maxWidth">
-          <div className="pricingTabs flex alignCenter justifyCenter gap1 width100">
+          <div className="pricingTabs flex alignCenter justifyCenter gap2 width100">
             <div className="pricingTab">
               <h2>Monthly</h2>
               <h3>₹ 99</h3>
@@ -101,7 +101,7 @@ const Pricing = () => {
               </p>
               <button>Continue</button>
             </div>
-            <div className="pricingTab">
+            <div className="pricingTab scale">
               <h2>Yearly</h2>
               <h3>₹ 999</h3>
               <p>

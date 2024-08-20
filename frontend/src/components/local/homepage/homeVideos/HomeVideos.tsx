@@ -8,27 +8,51 @@ const trendings = [
   {
     id: 1,
     image: course,
+    title: "Node.js Training Course",
+    duration: "3+ Hours",
+    trainer: "Vandana Saxena",
+    link: "nodejs-training",
   },
   {
     id: 2,
     image: course,
+    title: "Node.js Training Course",
+    duration: "3+ Hours",
+    trainer: "Vandana Saxena",
+    link: "nodejs-training",
   },
   {
     id: 3,
     image: course,
+    title: "Node.js Training Course",
+    duration: "3+ Hours",
+    trainer: "Vandana Saxena",
+    link: "nodejs-training",
   },
   {
     id: 4,
     image: course,
+    title: "Node.js Training Course",
+    duration: "3+ Hours",
+    trainer: "Vandana Saxena",
+    link: "nodejs-training",
   },
-  {
-    id: 5,
-    image: course,
-  },
-  {
-    id: 6,
-    image: course,
-  },
+  // {
+  //   id: 5,
+  //   image: course,
+  //   title: "Node.js Training Course",
+  //   duration: "3+ Hours",
+  //   trainer: "Vandana Saxena",
+  //   link: "nodejs-training",
+  // },
+  // {
+  //   id: 6,
+  //   image: course,
+  //   title: "Node.js Training Course",
+  //   duration: "3+ Hours",
+  //   trainer: "Vandana Saxena",
+  //   link: "nodejs-training",
+  // },
 ];
 
 const arrowIconStyling = {
@@ -49,7 +73,17 @@ const HomeVideos = () => {
           </div>
           <div className="trendingTabs flex alignCenter justifyCenter gap1">
             {trendings.map((item) => {
-              return <VideoCard key={item.id} image={item.image} />;
+              return (
+                <VideoCard
+                  key={item.id}
+                  image={item.image}
+                  title={item.title}
+                  duration={item.duration}
+                  trainer={item.trainer}
+                  link={item.link}
+                  vClass="vCard"
+                />
+              );
             })}
           </div>
         </div>
@@ -57,14 +91,24 @@ const HomeVideos = () => {
       <section className="softSkills width100 flex alignCenter justifyCenter">
         <div className="softSkillsContainer width95 maxWidth">
           <div className="softSkillsHead flex alignCenter spaceBtw">
-            <h2>Soft Skills</h2>
+            <h2 className="marginBottom1">Soft Skills</h2>
             <p>
               Show All <PiArrowRight style={arrowIconStyling} />
             </p>
           </div>
           <div className="trendingTabs flex alignCenter justifyCenter gap1">
             {trendings.map((item) => {
-              return <VideoCard key={item.id} image={course2} />;
+              return (
+                <VideoCard
+                  key={item.id}
+                  image={course2}
+                  title={item.title}
+                  duration={item.duration}
+                  trainer={item.trainer}
+                  link={item.link}
+                  vClass="vCard"
+                />
+              );
             })}
           </div>
         </div>

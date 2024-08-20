@@ -1,9 +1,60 @@
 .videoCard {
-  width: 20%;
+  width: 25%;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+  /* height: 25rem; */
 }
 
 .videoCard > img {
   width: 100%;
   height: auto;
   border-radius: 0.2rem;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
+}
+
+.videoCard > .vCardContent {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.videoCard > .vCardContent > h3 {
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.videoCard > .vCardContent > p {
+  font-size: 1.2rem;
+  color: var(--light3);
+  opacity: 0.3;
+  margin: 0 0 0.5rem 0;
+}
+
+.videoCard > .vCardContent > button {
+  display: none;
+  background-color: var(--mainBg4);
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  margin: 1rem 0 0 0;
+}
+
+.videoCard > .vCardContent > button:hover {
+  background-color: var(--mainBg3);
+  transition: 0.3s all ease-in-out;
+}
+
+.videoCard:hover > img {
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.1));
+  transition: 0.3s all ease-in-out;
+}
+
+.videoCard:hover > .vCardContent {
+  border-left: 2px solid var(--mainBg4);
+  padding: 0 0 0 1rem;
+  transition: 0.2s all ease-in-out;
+}
+
+.videoCard:hover > .vCardContent > button {
+  display: block;
 }

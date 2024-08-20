@@ -5,3 +5,19 @@
 .trendings > .trendingContainer > .trendingHead {
   margin: 0 0 1rem 0;
 }
+
+.trendings > .trendingContainer > .trendingTabs {
+  cursor: pointer;
+}
+
+.trendings > .trendingContainer > .trendingTabs > .vCard {
+  width: 25%;
+}
+
+.softSkills > .softSkillsContainer > .trendingTabs {
+  cursor: pointer;
+}
+
+.softSkills > .softSkillsContainer > .trendingTabs > .vCard {
+  width: 25%;
+}
