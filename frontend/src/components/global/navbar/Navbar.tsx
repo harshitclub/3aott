@@ -1,15 +1,17 @@
+"use client";
+import { useRouter } from "next/navigation";
 import "./style.css";
 import { PiUserCircle } from "react-icons/pi";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import getCookie from "@/components/local/getCookie";
 const Navbar = () => {
+  const router = useRouter();
+  function deleteCookie(name: string) {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+    location.reload();
+  }
+  const cookieValue = getCookie("3aLogin");
+
   return (
     <>
       {/* <header>this is header</header> */}
@@ -22,15 +24,23 @@ const Navbar = () => {
             <li>
               <Link href="/">Home</Link>
             </li>
-            <li>
-              <Link href="/pricing">Pricing</Link>
-            </li>
-            <li>
-              <Link href="/login">Login</Link>
-            </li>
-            <li>
-              <Link href="/signup">Signup</Link>
-            </li>
+            {cookieValue ? (
+              <>
+                <li onClick={() => deleteCookie("3aLogin")}>Logout</li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link href="/pricing">Pricing</Link>
+                </li>
+                <li>
+                  <Link href="/login">Login</Link>
+                </li>
+                <li>
+                  <Link href="/signup">Signup</Link>
+                </li>
+              </>
+            )}
           </ul>
           <div className="userMenu">
             <PiUserCircle

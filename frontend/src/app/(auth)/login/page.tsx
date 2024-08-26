@@ -1,10 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import "./style.css";
 import { PiArrowBendUpLeft } from "react-icons/pi";
 import Link from "next/link";
 import getCookie from "@/components/local/getCookie";
 const Login = () => {
+  const router = useRouter();
   const [cred, setCred] = useState({
     email: "kundan.k@3alearningsolutions.com",
     password: "Kundan@123",
@@ -36,12 +38,15 @@ const Login = () => {
       setCookie();
     }
     setFormData(initialFormData);
+    location.href = "/";
   };
 
   useEffect(() => {
     const cookieValue = getCookie("3aLogin");
 
-    console.log(cookieValue);
+    if (cookieValue) {
+      router.push("/");
+    }
   }, []);
 
   return (

@@ -4,6 +4,10 @@ nav {
   height: 4rem;
 }
 
+nav > .navContainer > .menu > li {
+  cursor: pointer;
+}
+
 nav > .navContainer > .userMenu > .navUserIcon {
   font-size: 1.7rem;
 }

@@ -1,7 +1,19 @@
+"use client";
 import { PiArrowBendUpLeft } from "react-icons/pi";
+import { useRouter } from "next/navigation";
 import "./style.css";
 import Link from "next/link";
+import { useEffect } from "react";
+import getCookie from "@/components/local/getCookie";
 const Signup = () => {
+  const router = useRouter();
+  useEffect(() => {
+    const cookieValue = getCookie("3aLogin");
+
+    if (cookieValue) {
+      router.push("/");
+    }
+  }, []);
   return (
     <>
       <section className="signup width100 flex alignCenter justifyCenter">

@@ -1,3 +1,4 @@
+"use client";
 const getCookie = (name: string) => {
   const cookies = document.cookie.split(";");
 
