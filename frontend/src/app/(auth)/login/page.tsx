@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.css";
 import { PiArrowBendUpLeft } from "react-icons/pi";
 import Link from "next/link";
+import getCookie from "@/components/local/getCookie";
 const Login = () => {
   const [cred, setCred] = useState({
     email: "kundan.k@3alearningsolutions.com",
@@ -29,12 +30,19 @@ const Login = () => {
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+
     console.log(formData);
     if (formData.email === cred.email && formData.password === cred.password) {
       setCookie();
     }
     setFormData(initialFormData);
   };
+
+  useEffect(() => {
+    const cookieValue = getCookie("3aLogin");
+
+    console.log(cookieValue);
+  }, []);
 
   return (
     <>
