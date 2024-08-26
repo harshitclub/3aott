@@ -1,7 +1,6 @@
 footer {
   background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.4)),
     var(--mainBg2);
-  margin: 2rem 0 0 0;
 }
 
 footer > .fContainer {

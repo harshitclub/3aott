@@ -3,7 +3,7 @@
     url(../../../assets/pricing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 
 .pricing > .pricingContainer > .pricingTabs > .pricingTab {

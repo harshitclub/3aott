@@ -8,13 +8,41 @@ const Login = () => {
     email: "kundan.k@3alearningsolutions.com",
     password: "Kundan@123",
   });
+  const initialFormData = {
+    email: "",
+    password: "",
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (event: any) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const setCookie = () => {
+    document.cookie = `3aLogin=${true}; expires=${new Date(
+      Date.now() + 24 * 60 * 60 * 1000
+    ).toUTCString()}; path=/`;
+  };
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    console.log(formData);
+    if (formData.email === cred.email && formData.password === cred.password) {
+      setCookie();
+    }
+    setFormData(initialFormData);
+  };
+
   return (
     <>
       <section className="login width100 flex alignCenter justifyCenter">
         <div className="loginContainer width95 maxWidth flex alignCenter justifyCenter">
           <div className="loginForm">
             <h1>Login To 3a TV</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="lFTab width100 marginBottom1">
                 <label>
                   Email<span>*</span>
@@ -23,6 +51,8 @@ const Login = () => {
                   placeholder="ex. example@gmail.com"
                   type="email"
                   name="email"
+                  onChange={handleChange}
+                  value={formData.email} // Controlled component approach
                   required
                 />
                 {/* <p style={{ textAlign: "left", color: "#dc2626" }}>
@@ -37,6 +67,8 @@ const Login = () => {
                   placeholder="********"
                   type="password"
                   name="password"
+                  onChange={handleChange}
+                  value={formData.password} // Controlled component approach
                   required
                   className="marginBottom05"
                 />
@@ -46,7 +78,9 @@ const Login = () => {
                 <p>Forget Password?</p>
               </div>
 
-              <button className="marginBottom1">Login</button>
+              <button className="marginBottom1" type="submit">
+                Login
+              </button>
               <p>
                 New to 3a TV? <Link href="/signup">Signup</Link>
               </p>

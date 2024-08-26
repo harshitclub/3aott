@@ -664,3 +664,31 @@ body {
 .font600 {
   font-weight: 600;
 }
+
+/* not found page */
+.notFound > .notFoundContainer {
+  height: 100vh;
+}
+
+.notFound > .notFoundContainer > h1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.notFound > .notFoundContainer > h2 {
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+
+.notFound > .notFoundContainer > a {
+  background-color: var(--color4);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.notFound > .notFoundContainer > a:hover {
+  transition: 0.2s all ease-in-out;
+  background-color: var(--mainBg4);
+}

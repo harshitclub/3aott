@@ -29,7 +29,7 @@ const VideoCard = ({
           <p>{trainer}</p>
           <h4>{duration}</h4>
           <button>
-            <Link href={`/${link}`}>
+            <Link href={`/video/${link}`}>
               Watch Now{" "}
               <PiArrowRight
                 style={{ display: "inline-block", margin: "0 0 0 1rem" }}

@@ -88,7 +88,7 @@ const HomeVideos = () => {
           </div>
         </div>
       </section>
-      <section className="softSkills width100 flex alignCenter justifyCenter">
+      <section className="softSkills width100 flex alignCenter justifyCenter marginBottom1">
         <div className="softSkillsContainer width95 maxWidth">
           <div className="softSkillsHead flex alignCenter spaceBtw">
             <h2 className="marginBottom1">Soft Skills</h2>

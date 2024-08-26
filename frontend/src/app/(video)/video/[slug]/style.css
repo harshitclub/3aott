@@ -1,0 +1,8 @@
+.videoContainer > .videoPlayer {
+  margin: 1rem 0;
+}
+.videoContainer > .videoPlayer > video {
+  width: 100%;
+  border-radius: 0.3rem;
+  border: none;
+}
